@@ -1,0 +1,29 @@
+### This program creates the Pig Latin form of an English word. Pig Latin is a game of alterations played on the English language game. T
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+    function convertPigLatin(){
+        var input = document.getElementById("myInput").value;
+        var translation = input.slice(1)+input.slice(0,1)+'ay';
+        document.getElementById("myOutput").innerHTML = translation;
+        console.log(translation)
+    }
+
+
+    </script>
+<body>
+    <h2>Pig Latin</h2>
+
+    <h3>Enter word:</h3>
+    <input type="text" id="myInput">
+    <button type="button" onclick="convertPigLatin()">Click here</button>
+
+    <p>The Pig Latin is: </p><p id="myOutput"></p>
+</body>
+</html>
