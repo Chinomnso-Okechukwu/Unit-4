@@ -1,0 +1,41 @@
+### This website works such that when the user enters a text in an input element, the text is shown on the website’s body as a div with the text on it, resembling a postit note:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            border: 2px solid black;
+            background: royalblue;
+            width: 320px;
+            height: 300px;
+            padding: 20px;
+            position: absolute;
+            margin: 60px;
+            margin-right: -30px;
+        }
+
+    </style>
+
+</head>
+<script>
+function Displaytext() {
+    var input = document.querySelector("#myInput")
+    var display = document.querySelector("#box")
+    display.innerHTML = input.value
+}
+</script>
+<body>
+<h2>WORD DISPLAY</h2>
+
+    <h3>Enter word:</h3>
+    <input type="text" id="myInput">
+    <button type="button" onclick="Displaytext()">Click here</button>
+
+    <p>The displayed text is: </p><p id="myOutput">
+
+    <div id="box"></div>
+</p>
+</body>
+</html>
