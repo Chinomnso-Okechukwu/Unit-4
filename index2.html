@@ -1,0 +1,64 @@
+This program allows a user to enter a string and the program counts the number of vowels in the text.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function vowelCounter() {
+        var input = document.getElementById("myInput").value
+        var noOfVowels = 0;
+        var string = input.toString();
+        var noOfa =0;
+        var noOfe =0;
+        var noOfi =0;
+        var noOfo =0;
+        var noOfu =0;
+
+        for (var i = 0; i <= input.length - 1; i++) {
+            if (input.charAt(i) == "a" || input.charAt(i) == "e" || input.charAt(i) == "i" || input.charAt(i) == "o" || input.charAt(i) == "u") {
+        noOfVowels += 1;}
+            if (input.charAt(i) == "a"){
+                noOfa +=1;
+                }
+            if (input.charAt(i) == "e"){
+                noOfe +=1;
+          }
+            if (input.charAt(i) == "i"){
+                noOfi +=1;
+            }
+            if (input.charAt(i) == "o"){
+                noOfo +=1;
+            }
+            if(input.charAt(i) == "u"){
+                noOfu +=1;
+            }
+        }
+        document.getElementById("Numberr").innerHTML = noOfVowels;
+        document.getElementById("acount").innerHTML = noOfa;
+        document.getElementById("ecount").innerHTML = noOfe;
+        document.getElementById("icount").innerHTML = noOfi;
+        document.getElementById("ocount").innerHTML = noOfo;
+        document.getElementById("ucount").innerHTML = noOfu;
+        console.log(noOfVowels)
+
+    }
+
+</script>
+<body>
+<h1>Vowels Counter</h1>
+<h3>Enter a sentence below</h3>
+<h3>Input</h3>
+<input type="text" id="myInput">
+<button type="button" onclick="vowelCounter()">Click here</button>
+<p>Number of vowels: </p><p id="Numberr"> </p>
+<p>a: </p><p id="acount"></p><br>
+<p>e: </p><p id="ecount"></p><br>
+<p>i: </p><p id="icount"></p><br>
+<p>o: </p><p id="ocount"></p><br>
+<p>u: </p><p id="ucount"></p><br>
+
+
+</body>
+</html>
