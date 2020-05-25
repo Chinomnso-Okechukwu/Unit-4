@@ -1,0 +1,34 @@
+### This program checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like “racecar”
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function checkPalindrome(){
+        var input = document.getElementById("myInput").value;
+        var splitInput = input.split("");
+        var reverse = splitInput.reverse("");
+        var reverseInput = reverse.join("");
+
+        if(input === reverseInput){
+            document.getElementById("myOutput").innerHTML = input + " is a palindrome";
+        }
+        else{
+            document.getElementById("myOutput").innerHTML = input + " is not a palindrome";
+        }
+
+    }
+</script>
+<body>
+<h2>Palidrome</h2>
+
+    <h3>Enter word:</h3>
+    <input type="text" id="myInput">
+    <button type="button" onclick="checkPalindrome()">Click here</button>
+
+    <p>Palindrome? </p><p id="myOutput"></p>
+</body>
+</html>
